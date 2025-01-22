@@ -24,9 +24,16 @@ const Header = () => {
                 </div>
 
                 <div className='flex gap-3.5 text-2xl text-gray-500'>
-                    <CiLocationOn />
-                    <CiHeart />
-                    <CiShoppingCart />
+                    <div className='p-1 bg-gray-100 rounded-full'>
+                        <CiLocationOn />
+                    </div>
+                    <div className='p-1 bg-gray-100 rounded-full'>
+                        <CiHeart />
+                    </div>
+
+                    <div className='p-1 bg-gray-100 rounded-full'>
+                        <CiShoppingCart />
+                    </div>
                     <div className='flex gap-2 items-center'>
                         <p className='text-sm'>Đăng nhập</p>
                         <FaUser className='text-base' />

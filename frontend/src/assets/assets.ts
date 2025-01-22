@@ -168,8 +168,8 @@ export const danh_muc: { title: string; href: string; }[] = [
         href: "/phong-khach",
     },
     {
-        title: "Hàng trang trí",
-        href: "/hang-trang-tri",
+        title: "Phụ kiện trang trí",
+        href: "/phu-kien-trang-tri",
     },
 ]
 
@@ -205,3 +205,4 @@ export const products = [
         newPrice: 20600000,
     },
 ]
+
