@@ -204,5 +204,11 @@ export const products = [
         oldPrice: 18600000,
         newPrice: 20600000,
     },
+    {
+        image: product4,
+        name: "Bàn nước Orientale walnut",
+        oldPrice: 18600000,
+        newPrice: 20600000,
+    },
 ]
 

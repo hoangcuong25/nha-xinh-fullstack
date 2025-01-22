@@ -1,15 +1,8 @@
 'use client'
 
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { CiSearch } from "react-icons/ci";
-import { CiHeart } from "react-icons/ci";
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip"
+import { CiCreditCard1, CiSearch } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
 import { products } from "@/assets/assets"
 import collect_1 from '../../public/collect-1.jpg'
 import collect_2 from '../../public/collect-2.jpg'
@@ -18,273 +11,23 @@ import collect_4 from '../../public/collect-4.jpg'
 import collect_5 from '../../public/collect-5.jpg'
 import collect_6 from '../../public/collect-6.jpeg'
 
+import goc_cam_hung_1 from '../../public/noi-that-can-ho-cao-cap-1200x800.jpg'
+import goc_cam_hung_2 from '../../public/ghe-sofa-cho-phong-khach-nho-gon.jpg'
+import goc_cam_hung_3 from '../../public/khong-gian-nha-xinh-thao-dien-4-3-1200x800.jpg'
+
+import { SlEarphones } from "react-icons/sl";
+import { TbTruckDelivery } from "react-icons/tb";
+import DisplayListProduct from "./DisplayListProduct";
+
 const Hero = () => {
     return (
         <div className='mt-8 mx-3.5 sm:mx-7'>
-            <p className='text-2xl font-medium text-center underline underline-offset-8 text-gray-700'>SẢN PHẨM NỔI BẬT</p>
-
-            <div className='flex flex-wrap justify-between mt-5'>
-                {products.map((product, index) => (
-                    <div className='group relative' key={index}>
-                        <div className='flex flex-col items-center justify-start mt-5 rounded-md cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <Image src={product.image} alt={product.name} className='size-56 object-cover' />
-                            <p className='w-full text-start font-semibold mt-2'>{product.name}</p>
-                            <div className='flex gap-3 text-start w-full'>
-                                <p className='mt-2 font-thin text-gray-500 line-through'>{product.oldPrice} vnđ</p>
-                                <p className='mt-2 font-semibold text-yellow-500'>{product.newPrice} vnđ</p>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center justify-between transition-all duration-300 group-hover:-translate-y-5'>
-                            <Button
-                                className='mt-3 bg-yellow-500 rounded-[8px] '
-                            >
-                                Thêm vào giỏ
-                            </Button>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiSearch className='text-xl' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Xem nhanh</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-
-                        <div className='w-full flex justify-between px-2 absolute top-7 right-0 cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <div className='px-2.5 py-1.5 bg-yellow-400 rounded-[12px] text-white text-xs'>
-                                -10%
-                            </div>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiHeart className='text-2xl text-gray-700' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Thêm vào yêu thích</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <p className='text-2xl font-medium text-center underline underline-offset-8 mt-16 text-gray-700'>NỘI THẤT PHÒNG NGỦ</p>
-
-            <div className='flex flex-wrap justify-between mt-5'>
-                {products.map((product, index) => (
-                    <div className='group relative' key={index}>
-                        <div className='flex flex-col items-center justify-start mt-5 rounded-md cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <Image src={product.image} alt={product.name} className='size-56 object-cover' />
-                            <p className='w-full text-start font-semibold mt-2'>{product.name}</p>
-                            <div className='flex gap-3 text-start w-full'>
-                                <p className='mt-2 font-thin text-gray-500 line-through'>{product.oldPrice} vnđ</p>
-                                <p className='mt-2 font-semibold text-yellow-500'>{product.newPrice} vnđ</p>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center justify-between transition-all duration-300 group-hover:-translate-y-5'>
-                            <Button
-                                className='mt-3 bg-yellow-500 rounded-[8px] '
-                            >
-                                Thêm vào giỏ
-                            </Button>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiSearch className='text-xl' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Xem nhanh</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-
-                        <div className='w-full flex justify-between px-2 absolute top-7 right-0 cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <div className='px-2.5 py-1.5 bg-yellow-400 rounded-[12px] text-white text-xs'>
-                                -10%
-                            </div>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiHeart className='text-2xl text-gray-700' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Thêm vào yêu thích</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <p className='text-2xl font-medium text-center underline underline-offset-8 mt-16 text-gray-700'>NỘI THẤT PHÒNG KHÁCH</p>
-
-            <div className='flex flex-wrap justify-between mt-5'>
-                {products.map((product, index) => (
-                    <div className='group relative' key={index}>
-                        <div className='flex flex-col items-center justify-start mt-5 rounded-md cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <Image src={product.image} alt={product.name} className='size-56 object-cover' />
-                            <p className='w-full text-start font-semibold mt-2'>{product.name}</p>
-                            <div className='flex gap-3 text-start w-full'>
-                                <p className='mt-2 font-thin text-gray-500 line-through'>{product.oldPrice} vnđ</p>
-                                <p className='mt-2 font-semibold text-yellow-500'>{product.newPrice} vnđ</p>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center justify-between transition-all duration-300 group-hover:-translate-y-5'>
-                            <Button
-                                className='mt-3 bg-yellow-500 rounded-[8px] '
-                            >
-                                Thêm vào giỏ
-                            </Button>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiSearch className='text-xl' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Xem nhanh</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-
-                        <div className='w-full flex justify-between px-2 absolute top-7 right-0 cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <div className='px-2.5 py-1.5 bg-yellow-400 rounded-[12px] text-white text-xs'>
-                                -10%
-                            </div>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiHeart className='text-2xl text-gray-700' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Thêm vào yêu thích</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <p className='text-2xl font-medium text-center underline underline-offset-8 mt-16 text-gray-700'>NỘI THẤT PHÒNG LÀM VIỆC</p>
-
-            <div className='flex flex-wrap justify-between mt-5'>
-                {products.map((product, index) => (
-                    <div className='group relative' key={index}>
-                        <div className='flex flex-col items-center justify-start mt-5 rounded-md cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <Image src={product.image} alt={product.name} className='size-56 object-cover' />
-                            <p className='w-full text-start font-semibold mt-2'>{product.name}</p>
-                            <div className='flex gap-3 text-start w-full'>
-                                <p className='mt-2 font-thin text-gray-500 line-through'>{product.oldPrice} vnđ</p>
-                                <p className='mt-2 font-semibold text-yellow-500'>{product.newPrice} vnđ</p>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center justify-between transition-all duration-300 group-hover:-translate-y-5'>
-                            <Button
-                                className='mt-3 bg-yellow-500 rounded-[8px] '
-                            >
-                                Thêm vào giỏ
-                            </Button>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiSearch className='text-xl' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Xem nhanh</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-
-                        <div className='w-full flex justify-between px-2 absolute top-7 right-0 cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <div className='px-2.5 py-1.5 bg-yellow-400 rounded-[12px] text-white text-xs'>
-                                -10%
-                            </div>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiHeart className='text-2xl text-gray-700' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Thêm vào yêu thích</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <p className='text-2xl font-medium text-center underline underline-offset-8 mt-16 text-gray-700'>PHỤ KIỆN TRANG TRÍ</p>
-
-            <div className='flex flex-wrap justify-between mt-5'>
-                {products.map((product, index) => (
-                    <div className='group relative' key={index}>
-                        <div className='flex flex-col items-center justify-start mt-5 rounded-md cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <Image src={product.image} alt={product.name} className='size-56 object-cover' />
-                            <p className='w-full text-start font-semibold mt-2'>{product.name}</p>
-                            <div className='flex gap-3 text-start w-full'>
-                                <p className='mt-2 font-thin text-gray-500 line-through'>{product.oldPrice} vnđ</p>
-                                <p className='mt-2 font-semibold text-yellow-500'>{product.newPrice} vnđ</p>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center justify-between transition-all duration-300 group-hover:-translate-y-5'>
-                            <Button
-                                className='mt-3 bg-yellow-500 rounded-[8px] '
-                            >
-                                Thêm vào giỏ
-                            </Button>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiSearch className='text-xl' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Xem nhanh</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-
-                        <div className='w-full flex justify-between px-2 absolute top-7 right-0 cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
-                            <div className='px-2.5 py-1.5 bg-yellow-400 rounded-[12px] text-white text-xs'>
-                                -10%
-                            </div>
-
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <CiHeart className='text-2xl text-gray-700' />
-                                    </TooltipTrigger>
-                                    <TooltipContent className='px-3.5 py-2 rounded-[7px]'>
-                                        <p>Thêm vào yêu thích</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <DisplayListProduct tittle='SẢN PHẨM NỔI BẬT' products={products} />
+            <DisplayListProduct tittle='NỘI THẤT PHÒNG NGỦ' products={products} />
+            <DisplayListProduct tittle='NỘI THẤT PHÒNG KHÁCH' products={products} />
+            <DisplayListProduct tittle='NỘI THẤT PHÒNG LÀM VIỆC' products={products} />
+            <DisplayListProduct tittle='NỘI THẤT PHÒNG ĂN' products={products} />
+            <DisplayListProduct tittle='PHỤ KIỆN TRANG TRÍ' products={products} />
 
             <p className='text-2xl font-medium text-center underline underline-offset-8 mt-16 mb-8 text-gray-700'>BỘ SƯU TẬP</p>
 
@@ -313,6 +56,57 @@ const Hero = () => {
                 </div>
                 <Image src={collect_3} alt='collection' className='size-[420px] rounded-[10px] object-cover' />
                 <Image src={collect_4} alt='collection' className='size-[420px] rounded-[10px] object-cover' />
+            </div>
+
+            <p className='text-2xl font-medium text-center underline underline-offset-8 mt-16 mb-8 text-gray-700'>TRẢI NGHIỆM KHÁCH HÀNG</p>
+
+            <div className='flex gap-5 h-[268px]'>
+                <div className='w-72 h-full rounded-[12px] bg-gray-100 shadow-md p-7'>
+                    <p className='text-5xl text-gray-700 font-semibold mb-3.5'>+ 50</p>
+                    <p className='mb-10'>sản phẩm</p>
+                    <p className='text-5xl text-gray-700 font-semibold mb-3.5'>+200</p>
+                    <p>khách hàng tin dùng</p>
+                </div>
+                <div className='flex justify-between items-center gap-16 w-full h-full rounded-[12px] bg-gray-100 shadow-md p-7'>
+                    <div className='flex flex-col items-center gap-5'>
+                        <CiShoppingCart className='text-gray-700 text-8xl p-3.5 bg-white rounded-full' />
+                        <p className='text-gray-700'>Lựa chọn sản phẩm</p>
+                    </div>
+                    <div className='flex flex-col items-center gap-5'>
+                        <SlEarphones className='text-gray-700 text-8xl p-3.5 bg-white rounded-full' />
+                        <p className='text-gray-700 '>Nhận tư vấn bởi đội ngũ chuyên nghiệp</p>
+                    </div>
+                    <div className='flex flex-col items-center gap-5'>
+                        <CiCreditCard1 className='text-gray-700 text-8xl p-3.5 bg-white rounded-full' />
+                        <p className='text-gray-700'>Thanh toán nhanh chóng, với chương trình hỗ trợ trả góp</p>
+                    </div>
+                    <div className='flex flex-col items-center gap-5'>
+                        <TbTruckDelivery className='text-gray-700 text-8xl p-3.5 bg-white rounded-full' />
+                        <p className='text-gray-700'>Vận chuyển và lắp ráp miễn phí tại gia</p>
+                    </div>
+                </div>
+            </div>
+
+            <p className='text-2xl font-medium text-center underline underline-offset-8 mt-16 mb-8 text-gray-700'>GÓC CẢM HỨNG</p>
+
+            <div className='flex justify-between'>
+                <div className='flex flex-col gap-5'>
+                    <Image src={goc_cam_hung_1} alt='collection' className='h-[300px] w-[400px] rounded-[10px] object-cover' />
+                    <p className='text-lg font-semibold text-center w-[400px]'>Ghế sofa cho không gian nhỏ</p>
+                    <p>Ghế sofa là thực sự cần thiết cho không gian phòng khách ...</p>
+                </div>
+
+                <div className='flex flex-col gap-5'>
+                    <Image src={goc_cam_hung_2} alt='collection' className='h-[300px] w-[400px] rounded-[10px] object-cover' />
+                    <p className='text-lg font-semibold text-center w-[400px]'>Nội thất của căn hộ mang nét đẹp nghệ thuật hài hòa giữa truyền thống và hiện đại</p>
+                    <p>Với nội thất được thiết kế chỉnh chu, căn hộ thuộc sở hữu ...</p>
+                </div>
+
+                <div className='flex flex-col gap-5'>
+                    <Image src={goc_cam_hung_3} alt='collection' className='h-[300px] w-[400px] rounded-[10px] object-cover' />
+                    <p className='text-lg font-semibold text-center w-[400px]'>Khám Phá Không Gian Nhà Xinh Thảo Điền</p>
+                    <p>hà Xinh Thảo Điền mang đến một không gian sống hiện đại ...</p>
+                </div>
             </div>
         </div>
     )

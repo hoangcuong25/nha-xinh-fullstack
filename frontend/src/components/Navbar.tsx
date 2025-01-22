@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import { IoMenu } from "react-icons/io5";
 import Link from "next/link"
 import { CiSearch } from "react-icons/ci";
 import { phong_khach, phong_an, phong_ngu, phong_lam_viec, hang_trang_tri, danh_muc } from "@/assets/assets";
@@ -12,7 +11,6 @@ const Navbar = () => {
         <div className='flex justify-between items-center mx-3.5 sm:mx-7 mt-5  border-b border-gray-200 pb-3.5'>
             <div className='flex gap-7'>
                 <div className='flex items-center gap-3.5'>
-                    <IoMenu className='text-3xl' />
                     <Image src='/logo-nhaxinh-25nam-final.png' width='150' height='100' alt="logo" />
                 </div>
 
