@@ -1,3 +1,12 @@
+import banner1 from "./slideshow_4.jpg"
+import banner2 from "./slideshow_5.jpg"
+import banner3 from "./slideshow_8.jpg"
+
+import product1 from "./san-pham-1.jpg"
+import product2 from "./san-pham-2.jpg"
+import product3 from "./san-pham-3.jpg"
+import product4 from "./san-pham-4.jpg"
+
 export const phong_khach: { title: string; href: string; }[] = [
     {
         title: "Sofa",
@@ -161,5 +170,38 @@ export const danh_muc: { title: string; href: string; }[] = [
     {
         title: "Hàng trang trí",
         href: "/hang-trang-tri",
+    },
+]
+
+export const banner = [
+    banner1,
+    banner2,
+    banner3,
+]
+
+export const products = [
+    {
+        image: product1,
+        name: "Bàn nước Orientale walnut",
+        oldPrice: 42415000,
+        newPrice: 49900000,
+    },
+    {
+        image: product2,
+        name: "Armchair Mây mới",
+        oldPrice: 12350000,
+        newPrice: 15350000,
+    },
+    {
+        image: product3,
+        name: "Sofa 3 chỗ Orientale da beige R5",
+        oldPrice: 118000000,
+        newPrice: 13900000,
+    },
+    {
+        image: product4,
+        name: "Bàn nước Orientale walnut",
+        oldPrice: 18600000,
+        newPrice: 20600000,
     },
 ]
