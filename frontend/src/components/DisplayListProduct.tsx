@@ -1,5 +1,3 @@
-'use client'
-
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { CiHeart, CiSearch } from "react-icons/ci";
@@ -12,7 +10,7 @@ import {
 
 interface IProps {
     tittle: string,
-    products: {}
+    products: { image: any; name: string; oldPrice: number; newPrice: number; }[]
 }
 
 const DisplayListProduct: React.FC<IProps> = ({ tittle, products }) => {
@@ -21,7 +19,7 @@ const DisplayListProduct: React.FC<IProps> = ({ tittle, products }) => {
             <p className='text-2xl font-medium text-center underline underline-offset-8 mt-16 text-gray-700'>{tittle}</p>
 
             <div className='flex flex-wrap justify-between mt-5'>
-                {products.map((product, index) => (
+                {products.map((product: any, index) => (
                     <div className='group relative' key={index}>
                         <div className='flex flex-col items-center justify-start mt-5 rounded-md cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
                             <Image src={product.image} alt={product.name} className='size-56 object-cover' />

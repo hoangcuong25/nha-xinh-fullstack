@@ -8,18 +8,14 @@ const Header = () => {
     return (
         <div className=' mt-3 text-sm  border-b border-gray-200 pb-3.5'>
             <div className='mx-3.5 sm:mx-7 flex justify-between'>
-                <div className='flex gap-10 lg:gap-20 items-center'>
+                <div className='flex gap-5 lg:gap-10 items-center'>
                     <div className='hidden md:block'>
                         <p className=''><span className='text-gray-400'>VN </span> EN</p>
                     </div>
                     <div className='flex gap-5 items-center'>
                         <div className='flex gap-2 items-center'>
                             <FaPhoneVolume />
-                            <p className='hidden sm:block'>0906 904 114</p>
-                        </div>
-                        <div className='flex md:hidden gap-2 items-center '>
-                            <CiSearch className='text-lg' />
-                            <p className='hidden sm:block'>Tìm kiếm</p>
+                            <p className=''>0906 904 114</p>
                         </div>
                         <p className='text-gray-400 hidden md:block'>Giới thiệu</p>
                         <p className='text-gray-400 hidden md:block'>Khuyến mãi</p>
@@ -28,6 +24,9 @@ const Header = () => {
                 </div>
 
                 <div className='flex gap-3.5 text-2xl text-gray-500'>
+                    <div className='p-1 bg-gray-100 rounded-full block xl:hidden'>
+                        <CiSearch />
+                    </div>
                     <div className='p-1 bg-gray-100 rounded-full hidden md:block'>
                         <CiLocationOn />
                     </div>

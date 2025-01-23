@@ -1,5 +1,3 @@
-'use client'
-
 import Image from "next/image"
 import { CiCreditCard1, CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";

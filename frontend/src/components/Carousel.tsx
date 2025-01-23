@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-'use client'
+"use client"
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
