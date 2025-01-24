@@ -29,11 +29,11 @@ const Hero = () => {
 
             <p className='text-xl sm:text-2xl font-medium text-center underline underline-offset-8 mt-16 mb-8 text-gray-700'>BỘ SƯU TẬP</p>
 
-            <div className='flex flex-wrap justify-center gap-10'>
-                <Image src={collect_1} alt='collection' className='lg:size-[420px] sm:size-[200px] size-[120px]  rounded-[10px] object-cover' />
-                <Image src={collect_2} alt='collection' className='lg:size-[420px] sm:size-[200px] size-[120px] rounded-[10px] object-cover' />
+            <div className='flex flex-wrap justify-center gap-3.5 md:gap-5 lg:gap-10'>
+                <Image src={collect_1} alt='collection' className='bo-suu-tap' />
+                <Image src={collect_2} alt='collection' className='bo-suu-tap' />
                 <div className='relative'>
-                    <Image src={collect_5} alt='collection' className='lg:size-[420px] sm:size-[200px] size-[120px] rounded-[10px] opacity-80 object-cover' />
+                    <Image src={collect_5} alt='collection' className='bo-suu-tap opacity-80' />
                     <div className='absolute top-2 lg:top-10 left-1.5 lg:left-3.5 text-xs lg:text-base text-gray-900'>
                         <p className='font-semibold text-base lg:text-3xl'>Thiết kế</p>
                         <p className='my-1 lg:my-2.5 text-stone-600 text-sm lg:text-lg font-medium'>Sang trọng và giản dị </p>
@@ -44,7 +44,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className='relative'>
-                    <Image src={collect_6} alt='collection' className='lg:size-[420px] sm:size-[200px] size-[120px] rounded-[10px] opacity-80 object-cover' />
+                    <Image src={collect_6} alt='collection' className='bo-suu-tap opacity-80' />
                     <div className='absolute top-2 lg:top-10 left-1.5 lg:left-3.5 text-xs lg:text-base text-gray-900 '>
                         <p className='font-semibold text-base lg:text-3xl'>Chất lượng</p>
                         <p className='my-1 lg:my-2.5 text-stone-600 text-sm lg:text-lg font-medium'>Được chọn lọc kỹ lưỡng</p>
@@ -52,25 +52,24 @@ const Hero = () => {
                         </p>
                     </div>
                 </div>
-                <Image src={collect_3} alt='collection' className='lg:size-[420px] sm:size-[200px] size-[120px] rounded-[10px] object-cover' />
-                <Image src={collect_4} alt='collection' className='lg:size-[420px] sm:size-[200px] size-[120px] rounded-[10px] object-cover' />
+                <Image src={collect_3} alt='collection' className='bo-suu-tap' />
+                <Image src={collect_4} alt='collection' className='bo-suu-tap' />
             </div>
 
             <p className='text-xl sm:text-2xl font-medium text-center underline underline-offset-8 mt-16 mb-8 text-gray-700'>GÓC CẢM HỨNG</p>
 
             <div className='flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-3'>
-                <div className='flex flex-col items-center gap-5 w-[200px] lg:w-[300px] xl:w-[400px]'>
+                <div className='flex flex-col items-center gap-5 w-[300px] xl:w-[400px]'>
                     <Image src={goc_cam_hung_1} alt='collection' className='goc-cam-hung' />
-                    <p className='lg:text-lg text-base font-semibold text-center w-[200px] lg:w-[300px] xl:w-[400px] md:px-3.5 px-0'>Ghế sofa cho không gian nhỏ</p>
+                    <p className='lg:text-lg text-base text-gray-800 font-semibold text-center w-[300px] xl:w-[400px] md:px-3.5 px-0'>Ghế sofa cho không gian nhỏ</p>
                     <p className='md:px-3.5 px-0'>
                         Ghế sofa là thực sự cần thiết cho không gian phòng khách ...
-
                     </p>
                 </div>
 
-                <div className='flex flex-col items-center gap-5 w-[200px] lg:w-[300px] xl:w-[400px]'>
+                <div className='flex flex-col items-center gap-5 w-[300px] xl:w-[400px]'>
                     <Image src={goc_cam_hung_2} alt='collection' className='goc-cam-hung' />
-                    <p className='lg:text-lg text-base font-semibold text-center w-[200px] lg:w-[300px] xl:w-[400px] md:px-3.5 px-0'>
+                    <p className='lg:text-lg text-base text-gray-800 font-semibold text-center w-[300px] xl:w-[400px] md:px-3.5 px-0'>
                         Nội thất của căn hộ mang nét đẹp nghệ thuật hài hòa giữa truyền thống và hiện đại
                     </p>
                     <p className='md:px-3.5 px-0'>
@@ -78,9 +77,9 @@ const Hero = () => {
                     </p>
                 </div>
 
-                <div className='flex flex-col items-center gap-5 w-[200px] lg:w-[300px] xl:w-[400px]'>
+                <div className='flex flex-col items-center gap-5 w-[300px] xl:w-[400px]'>
                     <Image src={goc_cam_hung_3} alt='collection' className='goc-cam-hung' />
-                    <p className='lg:text-lg text-base font-semibold text-center w-[200px] lg:w-[300px] xl:w-[400px] md:px-3.5 px-0'>
+                    <p className='lg:text-lg text-base text-gray-800 font-semibold text-center w-[300px] xl:w-[400px] md:px-3.5 px-0'>
                         Khám Phá Không Gian Nhà Xinh Thảo Điền
                     </p>
                     <p className='md:px-3.5 px-0'>

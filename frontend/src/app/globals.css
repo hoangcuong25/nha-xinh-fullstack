@@ -7,5 +7,9 @@ body {
 }
 
 .goc-cam-hung {
-  @apply xl:h-[300px] xl:w-[400px] lg:h-[200px] lg:w-[300px] h-[133px] w-[200px] rounded-[10px] object-cover
+  @apply xl:h-[300px] xl:w-[400px] h-[200px] w-[300px] rounded-[10px] object-cover
+}
+
+.bo-suu-tap {
+  @apply lg:size-[420px] sm:size-[200px] size-[150px] rounded-[10px] object-cover
 }
