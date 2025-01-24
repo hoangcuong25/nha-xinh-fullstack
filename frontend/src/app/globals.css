@@ -6,3 +6,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.goc-cam-hung {
+  @apply xl:h-[300px] xl:w-[400px] lg:h-[200px] lg:w-[300px] h-[133px] w-[200px] rounded-[10px] object-cover
+}
