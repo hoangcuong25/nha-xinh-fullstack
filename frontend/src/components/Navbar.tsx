@@ -133,7 +133,7 @@ const Navbar = () => {
                                             </AccordionContent>
                                         </AccordionItem>
 
-                                        <AccordionItem value="item-6">
+                                        <AccordionItem value="item-7">
                                             <AccordionTrigger className='text-base underline-offset-4'>Hàng trang trí</AccordionTrigger>
                                             <AccordionContent className='hover:text-gray-900 cursor-pointer p-2 pt-0'>
                                                 Đèn hàng trang trí
@@ -146,7 +146,7 @@ const Navbar = () => {
                                             </AccordionContent>
                                         </AccordionItem>
 
-                                        <AccordionItem value="item-7">
+                                        <AccordionItem value="item-8">
                                             <AccordionTrigger className='text-base underline-offset-4'>Phòng</AccordionTrigger>
                                             <AccordionContent className='hover:text-gray-900 cursor-pointer p-2 pt-0'>
                                                 Phòng khách
@@ -190,69 +190,69 @@ const Navbar = () => {
                             <IoIosArrowUp className='group-hover:rotate-180 transition-all duration-500' />
                         </div>
 
-                        <div className='absolute z-50 top-10 text-[16px] hidden group-hover:flex bg-white border border-gray-200 w-[1000px]'>
-                            <div className='flex flex-col gap-5 p-7 text-nowrap '>
+                        <div className='absolute z-50 top-10 left-0 right-0 text-[16px] hidden group-hover:flex justify-between bg-white border border-gray-200 w-[100%] xl:w-[1000px]'>
+                            <div className='flex flex-col xl:gap-5 xl:p-7 gap-3 p-5 text-nowrap '>
                                 {phong_an.map((i) => (
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
                                         href={i.href}
                                     >
-                                        <p className='text-gray-500 hover:text-gray-900'>{i.title}</p>
+                                        <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
                                 ))}
                             </div>
 
-                            <div className='flex flex-col gap-5 p-7 text-nowrap'>
+                            <div className='flex flex-col xl:gap-5 xl:p-7 gap-3 p-5 text-nowrap'>
                                 {phong_khach.map((i) => (
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
                                         href={i.href}
                                     >
-                                        <p className='text-gray-500 hover:text-gray-900'>{i.title}</p>
+                                        <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
                                 ))}
                             </div>
 
-                            <div className='flex flex-col gap-5 p-7 text-nowrap'>
+                            <div className='flex flex-col xl:gap-5 xl:p-7 gap-3 p-5 text-nowrap'>
                                 {phong_ngu.map((i) => (
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
                                         href={i.href}
                                     >
-                                        <p className='text-gray-500 hover:text-gray-900'>{i.title}</p>
+                                        <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
                                 ))}
                             </div>
 
-                            <div className='flex flex-col gap-5 p-7 text-nowrap'>
+                            <div className='flex flex-col xl:gap-5 xl:p-7 gap-3 p-5 text-nowrap'>
                                 {phong_lam_viec.map((i) => (
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
                                         href={i.href}
                                     >
-                                        <p className='text-gray-500 hover:text-gray-900'>{i.title}</p>
+                                        <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
                                 ))}
                             </div>
 
-                            <div className='flex flex-col gap-5 p-7 text-nowrap'>
+                            <div className='flex flex-col xl:gap-5 xl:p-7 gap-3 p-5 text-nowrap'>
                                 {hang_trang_tri.map((i) => (
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
                                         href={i.href}
                                     >
-                                        <p className='text-gray-500 hover:text-gray-900'>{i.title}</p>
+                                        <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
                                 ))}
                             </div>
 
 
-                            <div className='p-7'>
+                            <div className='p-7 hidden xl:block'>
                                 <Image src='/nha-xinh-phong-khach-hien-dai-poppy-1-1200x800.jpg' width='300' height='300' alt="banner" />
                             </div>
                         </div>

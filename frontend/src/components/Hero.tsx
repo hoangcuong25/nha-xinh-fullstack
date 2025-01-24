@@ -16,6 +16,7 @@ import goc_cam_hung_3 from '../../public/khong-gian-nha-xinh-thao-dien-4-3-1200x
 import { SlEarphones } from "react-icons/sl";
 import { TbTruckDelivery } from "react-icons/tb";
 import DisplayListProduct from "./DisplayListProduct";
+import FormContact from "./FormContact";
 
 const Hero = () => {
     return (
@@ -87,6 +88,8 @@ const Hero = () => {
                     </p>
                 </div>
             </div>
+
+            <FormContact />
         </div>
     )
 }
