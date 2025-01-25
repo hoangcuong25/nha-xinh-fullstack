@@ -43,7 +43,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`${show ? 'sticky top-0 z-50 rounded-b-[10px] bg-white transition-all duration-700 ease-in-out' : 'flex'}  justify-between items-center mx-3.5 sm:mx-7 mt-5 border-b border-gray-200 pb-3.5`}>
+        <div className={`${show ? 'sticky flex top-0 z-50 rounded-b-[10px] bg-white transition-all duration-700 ease-in-out' : 'flex'}  justify-between items-center mx-3.5 sm:mx-7 mt-5 border-b border-gray-200 pb-3.5`}>
             <div className='flex gap-5 w-full'>
                 <div className='flex items-center justify-between w-full md:w-fit gap-3 '>
                     <Sheet>
