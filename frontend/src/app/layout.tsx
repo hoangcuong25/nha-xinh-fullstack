@@ -3,6 +3,7 @@ import { Open_Sans } from 'next/font/google'
 import "./globals.css";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const open_sans = Open_Sans({
   weight: ['500'],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Header />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

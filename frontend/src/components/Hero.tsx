@@ -13,10 +13,11 @@ import goc_cam_hung_1 from '../../public/noi-that-can-ho-cao-cap-1200x800.jpg'
 import goc_cam_hung_2 from '../../public/ghe-sofa-cho-phong-khach-nho-gon.jpg'
 import goc_cam_hung_3 from '../../public/khong-gian-nha-xinh-thao-dien-4-3-1200x800.jpg'
 
-import { SlEarphones } from "react-icons/sl";
-import { TbTruckDelivery } from "react-icons/tb";
+import cua_hang from '../../public/cua-hang-nha-xinh-191121-1400x690.jpg'
+
 import DisplayListProduct from "./DisplayListProduct";
 import FormContact from "./FormContact";
+import { Button } from "./ui/button";
 
 const Hero = () => {
     return (
@@ -90,6 +91,16 @@ const Hero = () => {
             </div>
 
             <FormContact />
+
+            <div className='mt-16 relative text-white h-fit'>
+                <Image alt="banner" src={cua_hang} className='w-full' />
+                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+                <div className='absolute top-0 flex flex-col items-center justify-center h-full w-full text-white text-center'>
+                    <p className='text-3xl font-bold mb-4'>Xem, chạm và cảm nhận</p>
+                    <button className='bg-none border-2 border-white px-5 py-2 font-semibold hover:bg-white hover:text-gray-800 transition-all duration-300'>Tìm cửa hàng</button>
+                </div>
+            </div>
         </div>
     )
 }
