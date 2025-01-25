@@ -190,7 +190,7 @@ const Navbar = () => {
 
                     <Image
                         src='/logo-nhaxinh-25nam-final.png'
-                        className='min-w-[150px]'
+                        className='min-w-[150px] cursor-pointer'
                         width='150'
                         height='100'
                         alt="logo"

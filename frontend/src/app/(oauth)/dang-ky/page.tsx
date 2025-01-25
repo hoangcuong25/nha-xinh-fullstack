@@ -64,11 +64,11 @@ const Register = () => {
     // }
 
     return (
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center mt-5'>
             <div className='flex flex-col items-center p-7 gap-5 mt-3 mb-10 md:mt-5 w-fit h-fit border border-gray-300 rounded-xl'>
                 <Image
                     src='/logo-nhaxinh-25nam-final.png'
-                    className='min-w-[150px]'
+                    className='min-w-[150px] cursor-pointer'
                     width='150'
                     height='100'
                     alt="logo"
@@ -178,7 +178,7 @@ const Register = () => {
                 <div className='flex flex-col items-center justify-center text-gray-700 text-sm'>
                     <p className=''>Đã là thành viên?</p>
                     <p>Đăng nhập để truy cập vào tài khoản của bạn</p>
-                    <Link href='/login' className='text-blue-500 hover:text-blue-700 underline underline-offset-2'>Đăng Nhập</Link>
+                    <Link href='/dang-nhap' className='text-blue-500 hover:text-blue-700 underline underline-offset-2'>Đăng Nhập</Link>
                 </div>
             </div>
         </div>
