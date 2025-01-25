@@ -61,7 +61,7 @@ const Hero = () => {
 
             <p className='text-xl sm:text-2xl font-medium text-center underline underline-offset-8 mt-16 mb-8 text-gray-700'>GÓC CẢM HỨNG</p>
 
-            <div className='flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-3'>
+            <div className='flex flex-col md:flex-row items-center md:items-start justify-center gap-10 md:gap-3 xl:gap-8'>
                 <div className='flex flex-col items-center gap-5 w-[300px] xl:w-[400px]'>
                     <Image src={goc_cam_hung_1} alt='collection' className='goc-cam-hung' />
                     <p className='lg:text-lg text-base text-gray-800 font-semibold text-center w-[300px] xl:w-[400px] md:px-3.5 px-0'>Ghế sofa cho không gian nhỏ</p>
