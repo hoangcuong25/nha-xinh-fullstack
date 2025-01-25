@@ -171,11 +171,11 @@ const Register = () => {
 
                     <div className='text-xs'>
                         <p>Khi đăng ký, bạn đã đồng ý với <span className='font-bold'>điều khoản sử dụng</span> và nội quy diễn</p>
-                        <p>đàn, nhận email thông báo từ diễn đàn và <span className='font-bold'>namperfume</span></p>
+                        <p>đàn, nhận email thông báo từ diễn đàn và <span className='font-bold'>Nhà Xinh</span></p>
                     </div>
                 </form>
 
-                <div className='flex flex-col items-center justify-center text-gray-700 text-sm'>
+                <div className='flex flex-col items-center justify-center text-gray-700 text-sm mt-3.5  '>
                     <p className=''>Đã là thành viên?</p>
                     <p>Đăng nhập để truy cập vào tài khoản của bạn</p>
                     <Link href='/dang-nhap' className='text-blue-500 hover:text-blue-700 underline underline-offset-2'>Đăng Nhập</Link>

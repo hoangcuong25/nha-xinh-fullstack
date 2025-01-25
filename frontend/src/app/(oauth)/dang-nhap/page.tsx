@@ -58,10 +58,6 @@ const Login = () => {
 
                 <div className='text-center'>
                     <p className='font-medium'>Đăng Nhập</p>
-                    <div className='flex gap-2'>
-                        <input type="checkbox" />
-                        <p className='text-gray-500 text-sm'>Lưu thông tin đăng nhập</p>
-                    </div>
                 </div>
 
                 <form className='flex flex-col gap-3.5 text-sm mt-3.5'>
@@ -90,13 +86,18 @@ const Login = () => {
                         }
                     </div>
 
-                    <Link className='text-[13px] text-blue-400 text-center ' href='/reset-password'>Quên mật khẩu</Link>
+                    <div className='flex gap-2'>
+                        <input type="checkbox" />
+                        <p className='text-gray-500 text-xs'>Lưu thông tin đăng nhập</p>
+                    </div>
+
+                    <Link className='text-[13px] text-blue-400 text-center mt-3' href='/reset-password'>Quên mật khẩu</Link>
 
                     {loading ?
-                        <button type='submit' className='flex justify-center bg-gray-300 text-white mt-3.5 rounded-[13px] w-[264px] text-center py-3 '>
+                        <button type='submit' className='flex justify-center bg-gray-300 text-white  rounded-[13px] w-[264px] text-center py-3 '>
                             <AiOutlineReload className='animate-spin text-green-500 text-xl text-center' />
                         </button>
-                        : <button type='submit' className='bg-red-500 text-white mt-3.5 rounded-[13px] px-24 py-3'>Đăng Nhập</button>
+                        : <button type='submit' className='bg-red-500 text-white  rounded-[13px] px-24 py-3'>Đăng Nhập</button>
                     }
 
                     <p className='mt-3 text-center font-medium'>Đăng nhập với</p>
@@ -105,7 +106,7 @@ const Login = () => {
                 <FacebookLogin /> */}
                 </form>
 
-                <div className='flex flex-col items-center justify-center text-gray-700 text-sm'>
+                <div className='flex flex-col items-center justify-center text-gray-700 text-sm mt-3.5'>
                     <p className=''>Thành viên mới?</p>
                     <p>Trở thành thành viên của namperfume</p>
                     <p>Để nhận những ưu đãi và dịch vụ bất ngờ</p>
