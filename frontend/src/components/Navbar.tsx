@@ -6,7 +6,7 @@ import { CiSearch } from "react-icons/ci";
 import { phong_khach, phong_an, phong_ngu, phong_lam_viec, hang_trang_tri, danh_muc } from "@/assets/assets";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
     Sheet,
@@ -27,8 +27,23 @@ const Navbar = () => {
 
     const router = useRouter()
 
+    const [show, setShow] = useState<boolean>(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 450) {
+                setShow(true);
+            } else {
+                setShow(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <div className='flex justify-between items-center mx-3.5 sm:mx-7 mt-5 border-b border-gray-200 pb-3.5'>
+        <div className={`${show ? 'sticky top-0 z-50 rounded-b-[10px] bg-white transition-all duration-700 ease-in-out' : 'flex'}  justify-between items-center mx-3.5 sm:mx-7 mt-5 border-b border-gray-200 pb-3.5`}>
             <div className='flex gap-5 w-full'>
                 <div className='flex items-center justify-between w-full md:w-fit gap-3 '>
                     <Sheet>
