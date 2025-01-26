@@ -23,9 +23,12 @@ export default function RootLayout({
       <body
         className={open_sans.className}
       >
-        {children}
-        <Footer />
+        <div className='max-w-screen-2xl'>
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
 }
+

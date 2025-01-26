@@ -17,7 +17,6 @@ import cua_hang from '../../public/cua-hang-nha-xinh-191121-1400x690.jpg'
 
 import DisplayListProduct from "./DisplayListProduct";
 import FormContact from "./FormContact";
-import { Button } from "./ui/button";
 import About from "./About";
 
 const Hero = () => {

@@ -43,7 +43,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`${show ? 'sticky flex top-0 z-50 rounded-b-[10px] bg-white transition-all duration-700 ease-in-out' : 'flex'}  justify-between items-center mx-3.5 sm:mx-7 mt-5 border-b border-gray-200 pb-3.5`}>
+        <div className={`${show ? 'sticky flex top-0 z-50 py-2 px-2 rounded-b-[10px] bg-white transition-all duration-700 ease-in-out' : 'flex'}  justify-between items-center mx-3.5 sm:mx-7 mt-5 border-b border-gray-200 pb-3.5`}>
             <div className='flex gap-5 w-full'>
                 <div className='flex items-center justify-between w-full md:w-fit gap-3 '>
                     <Sheet>
@@ -56,7 +56,7 @@ const Navbar = () => {
                             <SheetTitle></SheetTitle>
                             <SheetHeader>
                                 <div className='flex flex-col gap-1.5 p-2 pt-5 text-gray-600 text-left text-nowrap'>
-                                    <Link href={'/'} className='border-b border-gray-200 pb-3 hover:underline underline-offset-4'>Sản phẩm</Link>
+                                    <Link href={'/san-pham'} className='border-b border-gray-200 pb-3 hover:underline underline-offset-4'>Sản phẩm</Link>
                                     <Accordion type="single" collapsible>
                                         <AccordionItem value="item-1">
                                             <AccordionTrigger className='text-base underline-offset-4' >Sofa và Armchair</AccordionTrigger>
@@ -201,7 +201,7 @@ const Navbar = () => {
                 <div className='hidden md:flex flex-wrap items-center text-sm text-nowrap relative'>
                     <div className='group '>
                         <div className='flex items-center gap-2 p-2.5 group-hover:text-yellow-400 group-hover:bg-gray-50 rounded-md'>
-                            <p className=''>SẢN PHẨM</p>
+                            <Link href={'/san-pham'} className=''>SẢN PHẨM</Link>
                             <IoIosArrowUp className='group-hover:rotate-180 transition-all duration-500' />
                         </div>
 
