@@ -33,7 +33,7 @@ const Header = () => {
                     <div className='p-1 bg-gray-100 rounded-full block xl:hidden hover:text-gray-700'>
                         <CiSearch className='cursor-pointer' />
                     </div>
-                    <div className='p-1 bg-gray-100 rounded-full hidden md:block hover:bg-yellow-200 hover:text-gray-800'>
+                    <div className='p-1 bg-gray-100 rounded-full hidden md:block  hover:text-gray-700'>
                         <CiLocationOn className='cursor-pointer' />
                     </div>
                     <div className='p-1 bg-gray-100 rounded-full hidden md:block relative hover:text-gray-900'>
@@ -51,9 +51,9 @@ const Header = () => {
                             0
                         </div>
                     </div>
-                    <div 
-                    className='flex gap-2 items-center cursor-pointer hover:text-gray-900'
-                    onClick={() => router.push('/dang-ky')}
+                    <div
+                        className='flex gap-2 items-center cursor-pointer hover:text-gray-900'
+                        onClick={() => router.push('/dang-ky')}
                     >
                         <p className='text-sm'>Đăng nhập</p>
                         <FaUser className='text-base ' />

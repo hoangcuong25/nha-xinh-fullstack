@@ -1,12 +1,11 @@
-import Header from '@/components/Header'
-import Navbar from '@/components/Navbar'
+import Image from 'next/image'
 import React from 'react'
+import banner from '../../../assets/slideshow_5.jpg'
 
 const page = () => {
     return (
-        <div className='my-5 '>
-            <Header />
-            <Navbar />
+        <div>
+            <Image alt='banner' src={banner} />
         </div>
     )
 }

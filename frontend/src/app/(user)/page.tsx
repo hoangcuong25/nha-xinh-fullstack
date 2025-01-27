@@ -3,7 +3,7 @@ import Hero from "@/components/Hero"
 
 const page = () => {
     return (
-        <div className='my-5 '>
+        <div >
             <Carousel />
             <Hero />
         </div>

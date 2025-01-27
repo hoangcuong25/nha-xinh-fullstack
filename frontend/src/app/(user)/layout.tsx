@@ -19,10 +19,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <>
+        <div className='my-5 '>
             <Header />
             <Navbar />
             {children}
-        </>
+        </div>
     );
 }
