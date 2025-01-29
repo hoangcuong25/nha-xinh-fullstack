@@ -64,7 +64,7 @@ const page = () => {
                     <Button>ÁP DỤNG</Button>
                 </div>
 
-                <div className='mt-8 flex flex-wrap gap-5 justify-center'>
+                <div className='mt-8 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-3.5 justify-center'>
                     {products?.map((product: any, index: number) => (
                         <div className='group relative mt-5' key={index}>
                             <div className='flex flex-col items-center justify-between h-[460px] mt-5 mx-3.5 lg:mx-7 rounded-md cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
