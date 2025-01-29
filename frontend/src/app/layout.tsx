@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from 'next/font/google'
 import "./globals.css";
 import Footer from "@/components/Footer";
+import Support from "@/components/Support";
 
 const open_sans = Open_Sans({
   weight: ['500'],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <div className='max-w-screen-2xl'>
           {children}
           <Footer />
+          <Support />
         </div>
       </body>
     </html>
