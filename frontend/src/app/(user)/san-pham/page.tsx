@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import banner from '@/assets/slideshow_5.jpg'
@@ -9,15 +11,39 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { Button } from '@/components/ui/button'
-import DisplayListProduct from '@/components/DisplayListProduct'
 import { products } from '@/assets/assets'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix-ui/react-tooltip'
 import { CiHeart } from 'react-icons/ci'
+import { useRouter } from 'next/navigation'
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+
 
 const page = () => {
+
+    const router = useRouter()
+
     return (
         <div>
             <Image alt='banner' src={banner} />
+
+            <Breadcrumb>
+                <BreadcrumbList>
+                    <BreadcrumbItem>
+                        <BreadcrumbLink href="/">Trang chủ</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                        <BreadcrumbPage>Sản phẩm</BreadcrumbPage>
+                    </BreadcrumbItem>
+                </BreadcrumbList>
+            </Breadcrumb>
 
             <div className='flex flex-col mt-5 mx-3.5 sm:mx-7'>
                 <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-3.5'>
@@ -66,7 +92,7 @@ const page = () => {
 
                 <div className='mt-8 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-3.5 justify-center'>
                     {products?.map((product: any, index: number) => (
-                        <div className='group relative mt-5' key={index}>
+                        <div onClick={() => router.push(`/san-pham/${product._id}`)} className='group relative mt-5' key={index}>
                             <div className='flex flex-col items-center justify-between h-[460px] mt-5 mx-3.5 lg:mx-7 rounded-md cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
                                 <Image src={product.image} alt={product.name} className='size-56 object-cover' />
                                 <p className='w-full text-start font-semibold mt-2 text-[13px] sm:text-base text-gray-800'>{product.name}</p>

@@ -7,7 +7,7 @@ import { phong_khach, phong_an, phong_ngu, phong_lam_viec, hang_trang_tri, danh_
 import { IoIosArrowUp } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
     Sheet,
     SheetContent,
@@ -24,6 +24,9 @@ import {
 
 
 const Navbar = () => {
+
+    const Pathname = usePathname()
+    const Navbar = Pathname.split("/")[1]
 
     const router = useRouter()
 
@@ -56,7 +59,12 @@ const Navbar = () => {
                             <SheetTitle></SheetTitle>
                             <SheetHeader>
                                 <div className='flex flex-col gap-1.5 p-2 pt-5 text-gray-600 text-left text-nowrap'>
-                                    <Link href={'/san-pham'} className='border-b border-gray-200 pb-3 hover:underline underline-offset-4'>Sản phẩm</Link>
+                                    <Link
+                                        href={'/san-pham'}
+                                        className={`border-b border-gray-200 pb-3 hover:underline underline-offset-4 ${Navbar === 'san-pham' && 'text-yellow-400'}`}
+                                    >
+                                        Sản phẩm
+                                    </Link>
                                     <Accordion type="single" collapsible>
                                         <AccordionItem value="item-1">
                                             <AccordionTrigger className='text-base underline-offset-4' >Sofa và Armchair</AccordionTrigger>
@@ -200,9 +208,9 @@ const Navbar = () => {
 
                 <div className='hidden md:flex flex-wrap items-center text-sm text-nowrap relative'>
                     <div className='group '>
-                        <div className='flex items-center gap-2 p-2.5 group-hover:text-yellow-400 group-hover:bg-gray-50 rounded-md'>
-                            <Link href={'/san-pham'} className=''>SẢN PHẨM</Link>
-                            <IoIosArrowUp className='group-hover:rotate-180 transition-all duration-500' />
+                        <div className={`flex items-center gap-2 p-2.5 group-hover:text-yellow-400 group-hover:bg-gray-50 rounded-md ${Navbar === 'san-pham' && 'text-yellow-400 underline underline-offset-4'}`}>
+                            <Link href={'/san-pham'} className={``}>SẢN PHẨM</Link>
+                            <IoIosArrowUp className={`group-hover:rotate-180 transition-all duration-500 `} />
                         </div>
 
                         <div className='absolute z-50 top-10 left-0 right-0 text-[16px] hidden group-hover:flex justify-between bg-white border border-gray-200 w-[100%] xl:w-[1000px]'>

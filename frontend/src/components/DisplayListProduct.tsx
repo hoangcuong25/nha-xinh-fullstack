@@ -12,6 +12,7 @@ import {
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useRouter } from "next/navigation";
 
 interface IProps {
     tittle: string,
@@ -19,6 +20,8 @@ interface IProps {
 }
 
 const DisplayListProduct: React.FC<IProps> = ({ tittle, products }) => {
+
+    const router = useRouter()
 
     const setting = {
         dots: true,
@@ -58,7 +61,7 @@ const DisplayListProduct: React.FC<IProps> = ({ tittle, products }) => {
 
             <Slider {...setting}>
                 {products.slice(0, 5).map((product: any, index) => (
-                    <div className='group relative mt-5' key={index}>
+                    <div onClick={() => router.push(`/san-pham/${product._id}`)} className='group relative mt-5' key={index}>
                         <div className='flex flex-col items-center justify-between h-[460px] mt-5 mx-3.5 lg:mx-7 rounded-md cursor-pointer transition-all duration-300 group-hover:-translate-y-5'>
                             <Image src={product.image} alt={product.name} className='size-56 object-cover' />
                             <p className='w-full text-start font-semibold mt-2 text-[13px] sm:text-base text-gray-800'>{product.name}</p>
