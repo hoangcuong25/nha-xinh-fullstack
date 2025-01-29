@@ -1,10 +1,10 @@
 import React from 'react'
 
-const page = ({ params }: { params: { name: string } }) => {
+const page = async ({ params }: { params: Promise<{ name: string }> }) => {
     return (
         <div>
             123 ten san pham
-            {params.name}
+
         </div>
     )
 }
