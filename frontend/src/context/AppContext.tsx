@@ -48,7 +48,7 @@ interface AppContextProviderProps {
 
 const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => {
 
-    const [token, setToken] = useState<string | false>(localStorage.getItem("token") || false)
+    const [token, setToken] = useState<string | false>(false)
 
     const [userData, setUserData] = useState<UserData | false>(false)
 
@@ -79,6 +79,13 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
         formatMoney,
         userData
     }
+
+    useEffect(() => {
+        const savedToken = localStorage.getItem("token");
+        if (savedToken) {
+            setToken(savedToken);
+        }
+    }, []);
 
     useEffect(() => {
         if (token) {
