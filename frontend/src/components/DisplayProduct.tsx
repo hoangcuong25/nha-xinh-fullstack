@@ -94,7 +94,7 @@ const DisplayProduct: React.FC<IProps> = ({ productInfo }) => {
                         </div>
                         <p className='md:text-lg text-xs font-semibold'>Đánh giá trung bình</p>
                     </div>
-                    <div className='flex flex-col md:text-base text-xs md:px-16 px-1.5 border-x-2 border-gray-300'>
+                    <div className='flex flex-col md:text-base text-[10px] md:px-16 px-1.5 border-x-2 border-gray-300'>
                         <p>8 đánh giá 5 sao</p>
                         <p>5 đánh giá 4 sao</p>
                         <p>0 đánh giá 3 sao</p>

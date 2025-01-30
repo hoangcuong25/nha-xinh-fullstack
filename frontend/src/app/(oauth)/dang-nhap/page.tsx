@@ -11,6 +11,7 @@ import Image from 'next/image';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { AppContext } from '@/context/AppContext';
+import GoogleLogin from '@/components/GoogleLogin';
 
 const Login = () => {
 
@@ -107,8 +108,8 @@ const Login = () => {
 
                     <p className='mt-3 text-center font-medium'>Đăng nhập với</p>
 
-                    {/* <GoogleLoginForm />
-                <FacebookLogin /> */}
+                    <GoogleLogin />
+
                 </form>
 
                 <div className='flex flex-col items-center justify-center text-gray-700 text-sm mt-3.5'>
