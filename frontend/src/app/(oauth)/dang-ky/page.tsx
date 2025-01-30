@@ -46,7 +46,7 @@ const Register = () => {
                 dob
             }
 
-            const { data } = await axios.post('http://localhost:4000' + '/api/user/register', payload, {
+            const { data } = await axios.post(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/user/register', payload, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

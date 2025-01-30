@@ -8,8 +8,13 @@ import { AiOutlineReload } from 'react-icons/ai';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { AppContext } from '@/context/AppContext';
 
 const Login = () => {
+
+    const { setToken } = useContext(AppContext)
 
     const router = useRouter()
 
@@ -20,29 +25,29 @@ const Login = () => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
 
-    // const login = async (e: React.FormEvent): Promise<void> => {
-    //     e.preventDefault()
-    //     setLoading(true)
+    const login = async (e: React.FormEvent): Promise<void> => {
+        e.preventDefault()
+        setLoading(true)
 
-    //     try {
-    //         const { data } = await axios.post(backendUrl + '/api/user/login', { email, password })
+        try {
+            const { data } = await axios.post(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/user/login', { email, password })
 
-    //         if (data.success) {
-    //             toast.success("Đăng Nhập Thành Công")
-    //             localStorage.setItem('token', data.token)
-    //             setToken(data.token)
-    //             navigate('/')
-    //             scrollTo(0, 0)
-    //         } else {
-    //             toast.error(data.message)
-    //         }
+            if (data.success) {
+                toast.success("Đăng Nhập Thành Công")
+                localStorage.setItem('token', data.token)
+                setToken(data.token)
+                router.push('/')
+                scrollTo(0, 0)
+            } else {
+                toast.error(data.message)
+            }
 
-    //     } catch (error: any) {
-    //         toast.error(error.response?.data?.message || "Something went wrong")
-    //     }
+        } catch (error: any) {
+            toast.error(error.response?.data?.message || "Something went wrong")
+        }
 
-    //     setLoading(false)
-    // }
+        setLoading(false)
+    }
 
     return (
         <div className='flex justify-center items-center mt-5'>
@@ -60,7 +65,7 @@ const Login = () => {
                     <p className='font-medium'>Đăng Nhập</p>
                 </div>
 
-                <form className='flex flex-col gap-3.5 text-sm mt-3.5'>
+                <form onSubmit={login} className='flex flex-col gap-3.5 text-sm mt-3.5'>
                     <div>
                         <p>Email*:</p>
                         <input

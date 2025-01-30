@@ -53,7 +53,7 @@ const Header = () => {
                     </div>
                     <div
                         className='flex gap-2 items-center cursor-pointer hover:text-gray-900'
-                        onClick={() => router.push('/dang-ky')}
+                        onClick={() => router.push('/dang-nhap')}
                     >
                         <p className='text-sm'>Đăng nhập</p>
                         <FaUser className='text-base ' />
