@@ -6,8 +6,13 @@ import { CiHeart } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import { useContext } from "react";
+import { AppContext } from "@/context/AppContext";
+import Image from "next/image";
 
 const Header = () => {
+
+    const { token, userData } = useContext(AppContext)
 
     const router = useRouter()
 
@@ -51,13 +56,18 @@ const Header = () => {
                             0
                         </div>
                     </div>
-                    <div
-                        className='flex gap-2 items-center cursor-pointer hover:text-gray-900'
-                        onClick={() => router.push('/dang-nhap')}
-                    >
-                        <p className='text-sm'>Đăng nhập</p>
-                        <FaUser className='text-base ' />
-                    </div>
+
+                    {token
+                        ? userData?.image &&
+                        <Image onClick={() => router.push('/ho-so')} src={userData?.image} width={40} height={40} className='size-8 rounded-full cursor-pointer' alt="User profile" />
+                        : <div
+                            className='flex gap-2 items-center cursor-pointer hover:text-gray-900'
+                            onClick={() => router.push('/dang-nhap')}
+                        >
+                            <p className='text-sm'>Đăng nhập</p>
+                            <FaUser className='text-base ' />
+                        </div>
+                    }
                 </div>
             </div>
         </div>

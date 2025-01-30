@@ -20,8 +20,6 @@ const GoogleLogin = () => {
 
             const result = await signInWithPopup(auth, provider);
 
-            console.log(result)
-
             const lastName = result.user.displayName?.split(" ")[0]
             const firstName = result.user.displayName?.split(" ")[1]
             const email = result.user.email
