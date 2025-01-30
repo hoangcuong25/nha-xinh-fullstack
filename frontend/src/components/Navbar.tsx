@@ -65,7 +65,7 @@ const Navbar = () => {
                                     >
                                         Sản phẩm
                                     </Link>
-                                    <Accordion type="single" collapsible>
+                                    <Accordion type="single" collapsible onClick={() => router.push('/san-pham')}>
                                         <AccordionItem value="item-1">
                                             <AccordionTrigger className='text-base underline-offset-4' >Sofa và Armchair</AccordionTrigger>
                                             <AccordionContent className='hover:text-gray-900 cursor-pointer p-2 pt-0'>
@@ -186,10 +186,10 @@ const Navbar = () => {
                                         </AccordionItem>
                                     </Accordion>
 
-                                    <Link href={'/'} className='border-b border-gray-200 py-3 hover:underline underline-offset-4'>Bộ sưu tập</Link>
-                                    <Link href={'/'} className='border-b border-gray-200 py-3 hover:underline underline-offset-4'>Thiết kế nội thất</Link>
-                                    <Link href={'/'} className='border-b border-gray-200 py-3 hover:underline underline-offset-4'>Cửa hàng 360 độ</Link>
-                                    <Link href={'/'} className='border-b border-gray-200 py-3 hover:underline underline-offset-4'>Góc cảm hứng</Link>
+                                    <Link href={'/san-pham'} className='border-b border-gray-200 py-3 hover:underline underline-offset-4'>Bộ sưu tập</Link>
+                                    <Link href={'/san-pham'} className='border-b border-gray-200 py-3 hover:underline underline-offset-4'>Thiết kế nội thất</Link>
+                                    <Link href={'/san-pham'} className='border-b border-gray-200 py-3 hover:underline underline-offset-4'>Cửa hàng 360 độ</Link>
+                                    <Link href={'/san-pham'} className='border-b border-gray-200 py-3 hover:underline underline-offset-4'>Góc cảm hứng</Link>
 
                                 </div>
                             </SheetHeader>
@@ -219,7 +219,7 @@ const Navbar = () => {
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
-                                        href={i.href}
+                                        href='/san-pham'
                                     >
                                         <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
@@ -231,7 +231,7 @@ const Navbar = () => {
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
-                                        href={i.href}
+                                        href='/san-pham'
                                     >
                                         <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
@@ -243,7 +243,7 @@ const Navbar = () => {
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
-                                        href={i.href}
+                                        href='/san-pham'
                                     >
                                         <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
@@ -255,7 +255,7 @@ const Navbar = () => {
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
-                                        href={i.href}
+                                        href='/san-pham'
                                     >
                                         <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
@@ -267,7 +267,7 @@ const Navbar = () => {
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
-                                        href={i.href}
+                                        href='/san-pham'
                                     >
                                         <p className='text-gray-500 hover:text-gray-900 xl:text-base lg:text-sm text-[11px]'>{i.title}</p>
                                     </Link>
@@ -293,7 +293,7 @@ const Navbar = () => {
                                     <Link className='flex gap-2 items-center'
                                         key={i.title}
                                         title={i.title}
-                                        href={i.href}
+                                        href='/san-pham'
                                     >
                                         <p className='text-gray-500 hover:text-gray-900'>{i.title}</p>
                                     </Link>
@@ -303,25 +303,25 @@ const Navbar = () => {
                     </div>
 
                     <Link
-                        href={'/bo-suu-tap'}
+                        href='/san-pham'
                         className='text-sm p-2.5 hover:text-yellow-400 hover:bg-gray-50 rounded-md'
                     >
                         BỘ SƯU TẬP
                     </Link>
                     <Link
-                        href={'/bo-suu-tap'}
+                        href='/san-pham'
                         className='text-sm p-2.5 hover:text-yellow-400 hover:bg-gray-50 rounded-md'
                     >
                         THIẾT KẾ NỘI THẤT
                     </Link>
                     <Link
-                        href={'/bo-suu-tap'}
+                        href='/san-pham'
                         className='text-sm p-2.5 hover:text-yellow-400 hover:bg-gray-50 rounded-md'
                     >
                         CỬA HÀNG 360 ĐỘ
                     </Link>
                     <Link
-                        href={'/bo-suu-tap'}
+                        href='/san-pham'
                         className='text-sm p-2.5 hover:text-yellow-400 hover:bg-gray-50 rounded-md'
                     >
                         GÓC CẢM HỨNG

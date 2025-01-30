@@ -20,7 +20,7 @@ interface AppContextProviderProps {
 
 const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => {
 
-    const [token, setToken] = useState<string | false>()
+    const [token, setToken] = useState<string | false>(localStorage.getItem("token") || false)
 
     function formatMoney(amount: number): string {
         return amount?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');

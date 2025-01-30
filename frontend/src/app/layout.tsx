@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Support from "@/components/Support";
 import AppContextProvider from "@/context/AppContext";
+import { ToastContainer } from 'react-toastify';
 
 const open_sans = Open_Sans({
   weight: ['500'],
@@ -31,6 +32,7 @@ export default function RootLayout({
           </AppContextProvider>
           <Footer />
           <Support />
+          <ToastContainer />
         </div>
       </body>
     </html>

@@ -8,8 +8,13 @@ import { AiOutlineReload } from 'react-icons/ai';
 import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import Link from 'next/link';
+import axios from 'axios'
+import { toast } from 'react-toastify';
+import { AppContext } from '@/context/AppContext';
 
 const Register = () => {
+
+    const { setToken } = useContext(AppContext)
 
     const router = useRouter()
 
@@ -25,43 +30,43 @@ const Register = () => {
     const [password_2, setPassword_2] = useState<string>('')
     const [dob, setDob] = useState<string>('')
 
-    // const register = async (e: React.FormEvent): Promise<void> => {
-    //     setLoadingLogin(true)
+    const register = async (e: React.FormEvent): Promise<void> => {
+        setLoadingLogin(true)
 
-    //     try {
-    //         e.preventDefault()
+        try {
+            e.preventDefault()
 
-    //         const payload = {
-    //             firstName,
-    //             lastName,
-    //             email,
-    //             phone,
-    //             password_1,
-    //             password_2,
-    //             dob
-    //         }
+            const payload = {
+                firstName,
+                lastName,
+                email,
+                phone,
+                password_1,
+                password_2,
+                dob
+            }
 
-    //         const { data } = await axios.post(backendUrl + '/api/user/register', payload, {
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             }
-    //         })
+            const { data } = await axios.post('http://localhost:4000' + '/api/user/register', payload, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
 
-    //         if (data.success) {
-    //             toast.success("Đăng Ký Thành Công")
-    //             localStorage.setItem('token', data.token)
-    //             setToken(data.token)
-    //             navigate('/')
-    //             scrollTo(0, 0)
-    //         } else {
-    //             toast.error(data.message)
-    //         }
-    //     } catch (error: any) {
-    //         toast.error(error.response?.data?.message || "Something went wrong")
-    //     }
+            if (data.success) {
+                toast.success("Đăng Ký Thành Công")
+                localStorage.setItem('token', data.token)
+                setToken(data.token)
+                router.push('/')
+                scrollTo(0, 0)
+            } else {
+                toast.error(data.message)
+            }
+        } catch (error: any) {
+            toast.error(error.response?.data?.message || "Something went wrong")
+        }
 
-    //     setLoadingLogin(false)
-    // }
+        setLoadingLogin(false)
+    }
 
     return (
         <div className='flex items-center justify-center mt-5'>
@@ -80,7 +85,7 @@ const Register = () => {
                     <p className='text-gray-600 text-sm'>Bạn là thành viên mới? Ưu đãi và quà tặng độc đáo đang chờ bạn</p>
                 </div>
 
-                <form className='flex flex-col gap-3.5 text-sm'>
+                <form onSubmit={register} className='flex flex-col gap-3.5 text-sm'>
                     <div className='flex gap-3'>
                         <div className='w-1/2'>
                             <p>Họ*:</p>
