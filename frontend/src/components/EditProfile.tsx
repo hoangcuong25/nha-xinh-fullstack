@@ -21,7 +21,7 @@ type Props = {
 
 const EditProfile = ({ setShow, show }: Props) => {
 
-    const { userData, backendUrl, token, loadUserProfileData } = useContext(AppContext)
+    const { userData, token, loadUserProfileData } = useContext(AppContext)
 
     const [loading, setLoading] = useState<boolean>(false)
 
@@ -64,7 +64,7 @@ const EditProfile = ({ setShow, show }: Props) => {
             }
 
             const { data } = await axios.put(
-                backendUrl + '/api/user/update-profile',
+                process.env.NEXT_PUBLIC_BACKEND_URL + '/api/user/update-profile',
                 formData,
                 {
                     headers: {
@@ -92,7 +92,7 @@ const EditProfile = ({ setShow, show }: Props) => {
         e.preventDefault()
 
         try {
-            const { data } = await axios.put(backendUrl + '/api/user/update-phone', { phone }, { headers: { token } })
+            const { data } = await axios.put(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/user/update-phone', { phone }, { headers: { token } })
 
             if (data.success) {
                 toast.success('Thay đổi số điện thoại thành công')

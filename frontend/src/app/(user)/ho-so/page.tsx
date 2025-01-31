@@ -43,9 +43,9 @@ const MyProfile = () => {
 
                 {sidebar === 'Quản lí tài khoản' && <EditProfile show={show} setShow={setShow} />}
                 {sidebar === 'Tích điểm' && <Point show={show} setShow={setShow} />}
-                {sidebar === 'Giỏ hàng của tôi' && <Cart show={show} setShow={setShow} />}
+                {/* {sidebar === 'Giỏ hàng của tôi' && <Cart show={show} setShow={setShow} />}
                 {sidebar === 'Đơn hàng của tôi' && <TrackOrder show={show} setShow={setShow} />}
-                {sidebar === 'Danh sách yêu thích' && <WishList show={show} setShow={setShow} />}
+                {sidebar === 'Danh sách yêu thích' && <WishList show={show} setShow={setShow} />} */}
                 {sidebar === 'Hỏi đáp' && <FAQ show={show} setShow={setShow} />}
             </div>
 

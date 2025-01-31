@@ -26,7 +26,7 @@ type Props = {
 
 const ModalPassword: React.FC<Props> = ({ modalIsOpen, setIsOpen }) => {
 
-    const { backendUrl, token, loadProductData } = useContext(AppContext)
+    const { token, loadProductData } = useContext(AppContext)
 
     const [oldPassword, setOldPassword] = useState<string>()
     const [newPassword1, setnewPassword1] = useState<string>()
@@ -46,7 +46,7 @@ const ModalPassword: React.FC<Props> = ({ modalIsOpen, setIsOpen }) => {
 
     const updatePassword = async (): Promise<void> => {
         try {
-            const { data } = await axios.put(backendUrl + '/api/user/update-password', { oldPassword, newPassword1, newPassword2 }, { headers: { token } })
+            const { data } = await axios.put(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/user/update-password', { oldPassword, newPassword1, newPassword2 }, { headers: { token } })
 
             if (data.success) {
                 toast.success('Thay đổi mật khẩu thành công')

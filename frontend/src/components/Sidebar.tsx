@@ -47,7 +47,7 @@ const Sidebar = ({ sidebar, setSidebar, show }: Props) => {
                 >
                     Tích điểm
                 </p>
-                <p
+                {/* <p
                     className={`py-1.5 cursor-pointer px-3.5 ${sidebar === 'Giỏ hàng của tôi' && 'bg-stone-200 text-orange-500'}`}
                     onClick={() => setSidebar('Giỏ hàng của tôi')}
                 >
@@ -64,7 +64,7 @@ const Sidebar = ({ sidebar, setSidebar, show }: Props) => {
                     onClick={() => setSidebar('Danh sách yêu thích')}
                 >
                     Danh sách yêu thích
-                </p>
+                </p> */}
                 <p
                     className={`py-1.5 cursor-pointer px-3.5 ${sidebar === 'Hỏi đáp' && 'bg-stone-200 text-orange-500'}`}
                     onClick={() => setSidebar('Hỏi đáp')}

@@ -40,6 +40,7 @@ interface AppContextType {
     userData: UserData | false
     sidebar: string
     setSidebar: React.Dispatch<React.SetStateAction<string>>
+    loadUserProfileData: () => Promise<void>
 }
 
 export const AppContext = createContext<AppContextType | any>({});
@@ -81,7 +82,8 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
         token, setToken,
         formatMoney,
         userData,
-        sidebar, setSidebar
+        sidebar, setSidebar,
+        loadUserProfileData
     }
 
     useEffect(() => {
