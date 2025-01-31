@@ -38,6 +38,8 @@ interface AppContextType {
     setToken: React.Dispatch<React.SetStateAction<string | false>>
     formatMoney: (amount: number) => string
     userData: UserData | false
+    sidebar: string
+    setSidebar: React.Dispatch<React.SetStateAction<string>>
 }
 
 export const AppContext = createContext<AppContextType | any>({});
@@ -51,6 +53,7 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
     const [token, setToken] = useState<string | false>(false)
 
     const [userData, setUserData] = useState<UserData | false>(false)
+    const [sidebar, setSidebar] = useState<string>('')
 
     function formatMoney(amount: number): string {
         return amount?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
@@ -77,7 +80,8 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => 
     const value = {
         token, setToken,
         formatMoney,
-        userData
+        userData,
+        sidebar, setSidebar
     }
 
     useEffect(() => {
